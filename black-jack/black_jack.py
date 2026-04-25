@@ -15,7 +15,7 @@ def value_of_card(card):
     2.  'A' (ace card) = 1
     3.  '2' - '10' = numerical value.
     """
-    if card in ('J', 'Q', 'K'):
+    if card in {'J', 'Q', 'K'}:
         return 10
     if card == 'A':
         return 1
@@ -69,7 +69,7 @@ def is_blackjack(card_one, card_two):
     2.  'A' (ace card) = 11 (if already in hand)
     3.  '2' - '10' = numerical value.
     """
-    ten_cards = ('10', 'J', 'Q', 'K')
+    ten_cards = {'10', 'J', 'Q', 'K'}
     hand = (card_one, card_two)
     return 'A' in hand and any(card in ten_cards for card in hand)
 
